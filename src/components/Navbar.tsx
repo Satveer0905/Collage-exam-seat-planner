@@ -4,7 +4,7 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-indigo-700/90 to-indigo-600/90 backdrop-blur-lg text-white shadow-xl">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg--to-r from-indigo-700/90 to-indigo-600/90 backdrop-blur-lg text-white shadow-xl">
       <div className="max-w-7xl mx-auto px-6 h-16 flex justify-between items-center">
         
        
@@ -23,7 +23,7 @@ export default function Navbar() {
             <a
               key={item}
               href="#"
-              className="relative after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-indigo-200 after:transition-all hover:after:w-full hover:text-indigo-200"
+              className="relative after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-indigo-200 after:transition-all hover:after:w-full hover:text-indigo-200"
             >
               {item}
             </a>
