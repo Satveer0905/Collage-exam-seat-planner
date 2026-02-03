@@ -1,36 +1,46 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# College Exam Seat Planner 🎓
 
-## Getting Started
+A full-stack application designed to optimize classroom allocation for college exams. This project focuses on minimizing resource usage while prioritizing student convenience (lower floors first).
 
-First, run the development server:
+## 🚀 Live Demo
+**Live URL:** [INSERT_YOUR_VERCEL_URL_HERE]
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🛠️ Tech Stack
+- **Framework:** Next.js 14 (App Router)
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS
+- **Database:** MongoDB Atlas (Cloud)
+- **Deployment:** Vercel
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🧠 Core Logic: Greedy Allocation
+The application implements a **Greedy Optimization Algorithm** to solve the seat allocation problem:
+1. **Floor Priority:** All available rooms are sorted by `floorNo` in ascending order. This ensures students aren't forced to climb higher floors unnecessarily.
+2. **Room Minimization:** Within the same floor, rooms are sorted by `capacity` in descending order. This ensures the **minimum number of rooms** are used to satisfy the student count.
+3. **Capacity Check:** Before allocation, the system validates the total student count against the total available capacity. If insufficient, a "Not enough seats available" error is triggered.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
+## ✨ Features
+- **Dashboard:** Real-time statistics including total capacity, room count, and average classroom size.
+- **Classroom Management:** Dynamic form to add rooms with floor number, capacity, and facility details (e.g., washroom proximity).
+- **History Tracking:** Persistent logs of previous allocation attempts, including status (Success/Failure) and timestamp.
+- **Responsive UI:** Fully optimized for mobile and desktop views with a fixed navigation and footer.
 
-To learn more about Next.js, take a look at the following resources:
+## 📁 Project Structure
+- `src/lib/allocator.ts` - Contains the pure TypeScript logic for the allocation algorithm.
+- `src/app/api/` - Serverless API routes for MongoDB CRUD operations.
+- `src/models/` - Mongoose schemas (Room, Allocation, History).
+- `src/components/` - Modular UI components for high maintainability.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## ⚙️ Local Setup
+1. Clone the repository.
+2. Install dependencies: `npm install`.
+3. Create a `.env.local` file and add your `MONGODB_URI`.
+4. Run the development server: `npm run dev`.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📝 Submission Checklist
+- [x] GitHub Repository Link
+- [x] Live Deployment URL
+- [x] README.md with Logic Explanation
+- [x] 2-minute Demo Video
+- [x] Minimum 3+ Git Commits
