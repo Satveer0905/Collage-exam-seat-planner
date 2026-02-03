@@ -1,19 +1,29 @@
-import React from 'react';
+import React from "react";
 
 export default function Footer() {
   return (
-    <footer className="fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-gray-200 py-3 px-6 shadow-[0_-4px_10px_rgba(0,0,0,0.03)]">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-2">
-        <div className="text-[10px] font-bold text-gray-400 uppercase tracking-widest">
+    <footer className="fixed bottom-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-t border-gray-200 shadow-[0_-6px_16px_rgba(0,0,0,0.04)]">
+      <div className="max-w-7xl mx-auto px-6 py-3 flex flex-col md:flex-row justify-between items-center gap-3">
+        
+        <p className="text-[10px] md:text-[11px] font-semibold text-gray-400 uppercase tracking-widest">
           College Exam Seat Planner © 2026
-        </div>
-        <div className="flex items-center gap-4 text-[10px] font-black uppercase">
-          <div className="flex items-center gap-1.5 text-gray-500">
-            <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
-            System Operational
+        </p>
+
+       
+        <div className="flex items-center gap-4 text-[10px] font-bold uppercase">
+          
+         
+          <div className="flex items-center gap-2 px-2 py-1 rounded-full bg-green-50 text-green-600">
+            <span className="relative flex h-2 w-2">
+              <span className="absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75 animate-ping" />
+              <span className="relative inline-flex h-2 w-2 rounded-full bg-green-500" />
+            </span>
+            System Online
           </div>
-          <div className="text-indigo-600 bg-indigo-50 px-2 py-0.5 rounded">
-            Next.js + Tailwind
+
+         
+          <div className="px-3 py-1 rounded-full bg-indigo-50 text-indigo-600 tracking-wide">
+            Next.js · Tailwind
           </div>
         </div>
       </div>
